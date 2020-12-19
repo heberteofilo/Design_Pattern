@@ -1,0 +1,15 @@
+E:\PROGRAMAÇÃO\ARQUIVOS DOWNLOAD\CURSO UDEMY\BOOTCAMPDEVAVANADE\DesignPatterns\Design_Pattern\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.deps.json
+E:\PROGRAMAÇÃO\ARQUIVOS DOWNLOAD\CURSO UDEMY\BOOTCAMPDEVAVANADE\DesignPatterns\Design_Pattern\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.runtimeconfig.json
+E:\PROGRAMAÇÃO\ARQUIVOS DOWNLOAD\CURSO UDEMY\BOOTCAMPDEVAVANADE\DesignPatterns\Design_Pattern\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.runtimeconfig.dev.json
+E:\PROGRAMAÇÃO\ARQUIVOS DOWNLOAD\CURSO UDEMY\BOOTCAMPDEVAVANADE\DesignPatterns\Design_Pattern\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.dll
+E:\PROGRAMAÇÃO\ARQUIVOS DOWNLOAD\CURSO UDEMY\BOOTCAMPDEVAVANADE\DesignPatterns\Design_Pattern\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.pdb
+E:\PROGRAMAÇÃO\ARQUIVOS DOWNLOAD\CURSO UDEMY\BOOTCAMPDEVAVANADE\DesignPatterns\Design_Pattern\Infrastructure\bin\Debug\netcoreapp3.1\Application.dll
+E:\PROGRAMAÇÃO\ARQUIVOS DOWNLOAD\CURSO UDEMY\BOOTCAMPDEVAVANADE\DesignPatterns\Design_Pattern\Infrastructure\bin\Debug\netcoreapp3.1\Application.pdb
+E:\PROGRAMAÇÃO\ARQUIVOS DOWNLOAD\CURSO UDEMY\BOOTCAMPDEVAVANADE\DesignPatterns\Design_Pattern\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csprojAssemblyReference.cache
+E:\PROGRAMAÇÃO\ARQUIVOS DOWNLOAD\CURSO UDEMY\BOOTCAMPDEVAVANADE\DesignPatterns\Design_Pattern\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.AssemblyInfoInputs.cache
+E:\PROGRAMAÇÃO\ARQUIVOS DOWNLOAD\CURSO UDEMY\BOOTCAMPDEVAVANADE\DesignPatterns\Design_Pattern\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.AssemblyInfo.cs
+E:\PROGRAMAÇÃO\ARQUIVOS DOWNLOAD\CURSO UDEMY\BOOTCAMPDEVAVANADE\DesignPatterns\Design_Pattern\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csproj.CoreCompileInputs.cache
+E:\PROGRAMAÇÃO\ARQUIVOS DOWNLOAD\CURSO UDEMY\BOOTCAMPDEVAVANADE\DesignPatterns\Design_Pattern\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csproj.CopyComplete
+E:\PROGRAMAÇÃO\ARQUIVOS DOWNLOAD\CURSO UDEMY\BOOTCAMPDEVAVANADE\DesignPatterns\Design_Pattern\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.dll
+E:\PROGRAMAÇÃO\ARQUIVOS DOWNLOAD\CURSO UDEMY\BOOTCAMPDEVAVANADE\DesignPatterns\Design_Pattern\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.pdb
+E:\PROGRAMAÇÃO\ARQUIVOS DOWNLOAD\CURSO UDEMY\BOOTCAMPDEVAVANADE\DesignPatterns\Design_Pattern\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.genruntimeconfig.cache

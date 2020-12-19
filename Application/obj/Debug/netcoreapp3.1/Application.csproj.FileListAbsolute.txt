@@ -1,0 +1,9 @@
+E:\PROGRAMAÇÃO\ARQUIVOS DOWNLOAD\CURSO UDEMY\BOOTCAMPDEVAVANADE\DesignPatterns\Design_Pattern\Application\bin\Debug\netcoreapp3.1\Application.deps.json
+E:\PROGRAMAÇÃO\ARQUIVOS DOWNLOAD\CURSO UDEMY\BOOTCAMPDEVAVANADE\DesignPatterns\Design_Pattern\Application\bin\Debug\netcoreapp3.1\Application.dll
+E:\PROGRAMAÇÃO\ARQUIVOS DOWNLOAD\CURSO UDEMY\BOOTCAMPDEVAVANADE\DesignPatterns\Design_Pattern\Application\bin\Debug\netcoreapp3.1\Application.pdb
+E:\PROGRAMAÇÃO\ARQUIVOS DOWNLOAD\CURSO UDEMY\BOOTCAMPDEVAVANADE\DesignPatterns\Design_Pattern\Application\obj\Debug\netcoreapp3.1\Application.csprojAssemblyReference.cache
+E:\PROGRAMAÇÃO\ARQUIVOS DOWNLOAD\CURSO UDEMY\BOOTCAMPDEVAVANADE\DesignPatterns\Design_Pattern\Application\obj\Debug\netcoreapp3.1\Application.AssemblyInfoInputs.cache
+E:\PROGRAMAÇÃO\ARQUIVOS DOWNLOAD\CURSO UDEMY\BOOTCAMPDEVAVANADE\DesignPatterns\Design_Pattern\Application\obj\Debug\netcoreapp3.1\Application.AssemblyInfo.cs
+E:\PROGRAMAÇÃO\ARQUIVOS DOWNLOAD\CURSO UDEMY\BOOTCAMPDEVAVANADE\DesignPatterns\Design_Pattern\Application\obj\Debug\netcoreapp3.1\Application.csproj.CoreCompileInputs.cache
+E:\PROGRAMAÇÃO\ARQUIVOS DOWNLOAD\CURSO UDEMY\BOOTCAMPDEVAVANADE\DesignPatterns\Design_Pattern\Application\obj\Debug\netcoreapp3.1\Application.dll
+E:\PROGRAMAÇÃO\ARQUIVOS DOWNLOAD\CURSO UDEMY\BOOTCAMPDEVAVANADE\DesignPatterns\Design_Pattern\Application\obj\Debug\netcoreapp3.1\Application.pdb
