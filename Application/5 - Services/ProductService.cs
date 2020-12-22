@@ -1,8 +1,7 @@
-﻿using Application._2___Interfaces;
-using Application._4___Entidades;
+﻿using Application._4___Entidades;
 using Application._5___Repositorio;
 using Application._5___Services._5._1___Interfaces;
-using System;
+using Application._6___Validate;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -13,21 +12,40 @@ namespace Application._5___Services
     public class ProductService : IProductService
     {
         private readonly RepositorioProduct _RepositorioProduct;
+        private readonly ValidatePorTipo _ValidatePorTipo;
 
-        public ProductService(RepositorioProduct RepositorioProduct)
+        public ProductService()
+        {}
+
+        public ProductService(RepositorioProduct RepositorioProduct, ValidatePorTipo ValidatePorTipo)
         {
             _RepositorioProduct = RepositorioProduct;
+            _ValidatePorTipo = ValidatePorTipo;
         }
 
-        public void AddProduct(Product product)
+        public string AddProduct(Product product)
         {
-            _RepositorioProduct.Products.Add(product);
+            var validarPreco = _ValidatePorTipo.ValidadorDeDouble(product.Preco);
+            if (validarPreco)
+            { 
+                _RepositorioProduct.Products.Add(product);
+                return "Produto adicionado com sucesso!";
+            }
+            return "Valor deve ser maior do que 0.";
         }
 
         public List<Product> ConsultaProductsPorNome(string nomeProduto)
         {
-            var data = _RepositorioProduct.Products.Select(p => p).Where(p => p.NomeProduct == nomeProduto).ToList();
-            return data;
+            var validarNomeProduct = _ValidatePorTipo.ValidadorDeString(nomeProduto);
+            if (validarNomeProduct)
+            {
+                var data = _RepositorioProduct.Products.Select(p => p).Where(p => p.NomeProduct == nomeProduto).ToList();
+                return data;
+            }
+
+            List<Product> errorProduct = new List<Product>();
+            errorProduct.Add(new Product() { ErrorMessage = _ValidatePorTipo.ValidarPorTipos.FirstOrDefault(p => p.ErrorMessage == "Preencha o campo devidamente.").ErrorMessage });
+            return errorProduct;
         }
 
         public List<Product> ConsultaProductsPorProprietario(string nomeProprietario)

@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Console", "1 - Console"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{2C8BBFDB-1AD0-44B2-9028-B88463B5E305}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Test", "3 - Test", "{A0417344-B879-499D-90A2-9FAF23B748E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestService", "TestService\TestService.csproj", "{364899B7-06D8-4C8A-AE49-19E2F820AEB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,10 @@ Global
 		{2C8BBFDB-1AD0-44B2-9028-B88463B5E305}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C8BBFDB-1AD0-44B2-9028-B88463B5E305}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C8BBFDB-1AD0-44B2-9028-B88463B5E305}.Release|Any CPU.Build.0 = Release|Any CPU
+		{364899B7-06D8-4C8A-AE49-19E2F820AEB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{364899B7-06D8-4C8A-AE49-19E2F820AEB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{364899B7-06D8-4C8A-AE49-19E2F820AEB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{364899B7-06D8-4C8A-AE49-19E2F820AEB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{6A6A4B4F-6FE0-49D1-A868-387FE4B06B47} = {A85FCC52-3362-4E95-864C-23643AC511DC}
 		{2C8BBFDB-1AD0-44B2-9028-B88463B5E305} = {766EE0B0-BCEF-4614-AF64-6DDE57410ADF}
+		{364899B7-06D8-4C8A-AE49-19E2F820AEB3} = {A0417344-B879-499D-90A2-9FAF23B748E3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {68AC4F66-7A89-4A4D-84FA-7A1DAD74DE9E}

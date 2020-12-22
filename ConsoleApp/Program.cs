@@ -2,9 +2,11 @@
 using Application._4___Entidades.Enums;
 using Application._5___Repositorio;
 using Application._5___Services;
+using Application._6___Validate;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 
 namespace ConsoleApp
 {
@@ -19,9 +21,8 @@ namespace ConsoleApp
             ser escalado futuramente para melhores versões.
             */
             #endregion
-
             RepositorioProduct repositorioProduct = new RepositorioProduct();
-            ProductService productService = new ProductService(repositorioProduct);
+            ProductService productService = new ProductService(repositorioProduct, new ValidatePorTipo());
             bool conectado = true;
             string menuOption;
             string nomeProprietario;
@@ -81,7 +82,9 @@ namespace ConsoleApp
                             Console.Write($"Tipo Produto (NOVO/SEMI_NOVO/USADO) #{i}: ");
                             TipoEnum tipo = Enum.Parse<TipoEnum>(Console.ReadLine());
                             var data = new Product(new Usuario() { Nome = nomeProprietario }, nomeProduto, tipo, quantidade, preco);
-                            productService.AddProduct(data);
+                            Console.WriteLine();
+                            Console.WriteLine(productService.AddProduct(data));
+                            Console.ReadKey();
                         }
                         break;
                     case "3":
@@ -103,7 +106,14 @@ namespace ConsoleApp
                         Console.Write("Qual nome do produto: ");
                         nomeProduto = Console.ReadLine();
                         consulta = productService.ConsultaProductsPorNome(nomeProduto);
-                        if (consulta.Count > 0)
+                        var validadorConsulta = consulta.FirstOrDefault(p => p.ErrorMessage != null);
+                        if (validadorConsulta != null)
+                        {
+                            Console.WriteLine();
+                            Console.WriteLine("Error encontrado: " + validadorConsulta.ErrorMessage);
+                            Console.ReadKey();
+                        }
+                        else if (consulta.Count > 0)
                         {
                             foreach (var item in consulta)
                             {
