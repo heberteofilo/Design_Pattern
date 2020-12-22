@@ -1,6 +1,7 @@
 ﻿using Application._4___Entidades;
 using Application._4___Entidades.Enums;
 using Application._5___Repositorio;
+using Application._5___Services;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -20,6 +21,7 @@ namespace ConsoleApp
             #endregion
 
             RepositorioProduct repositorioProduct = new RepositorioProduct();
+            ProductService productService = new ProductService(repositorioProduct);
             bool conectado = true;
             string menuOption;
             string nomeProprietario;
@@ -50,10 +52,10 @@ namespace ConsoleApp
                         Console.Clear();
                         Console.WriteLine("--------------------------------------------");
                         Console.WriteLine("--------------Lista de Produto--------------");
-                        var result = repositorioProduct.Listar();
+                        var result = productService.Listar();
                         foreach (var item in result)
                         {
-                            Console.WriteLine(repositorioProduct.Descricao(item));
+                            Console.WriteLine(productService.Descricao(item));
                         }
                         Console.ReadKey();
                         break;
@@ -79,7 +81,7 @@ namespace ConsoleApp
                             Console.Write($"Tipo Produto (NOVO/SEMI_NOVO/USADO) #{i}: ");
                             TipoEnum tipo = Enum.Parse<TipoEnum>(Console.ReadLine());
                             var data = new Product(new Usuario() { Nome = nomeProprietario }, nomeProduto, tipo, quantidade, preco);
-                            repositorioProduct.AddProduct(data);
+                            productService.AddProduct(data);
                         }
                         break;
                     case "3":
@@ -91,7 +93,7 @@ namespace ConsoleApp
                         Console.Write("Qual nome do proprietário: ");
                         nomeProprietario = Console.ReadLine();
                         Console.WriteLine();
-                        Console.WriteLine(repositorioProduct.Delete(nomeProprietario, removerProduct));                     
+                        Console.WriteLine(productService.Delete(nomeProprietario, removerProduct));                     
                         Console.ReadKey();
                         break;
                     case "4":
@@ -100,12 +102,12 @@ namespace ConsoleApp
                         Console.WriteLine("---------Consulta Por Nome Produto----------");
                         Console.Write("Qual nome do produto: ");
                         nomeProduto = Console.ReadLine();
-                        consulta = repositorioProduct.ConsultaProductsPorNome(nomeProduto);
+                        consulta = productService.ConsultaProductsPorNome(nomeProduto);
                         if (consulta.Count > 0)
                         {
                             foreach (var item in consulta)
                             {
-                                Console.WriteLine(repositorioProduct.Descricao(item));
+                                Console.WriteLine(productService.Descricao(item));
                             }
                             Console.ReadKey();
                         }
@@ -122,12 +124,12 @@ namespace ConsoleApp
                         Console.WriteLine("---------Consulta Por Proprietário----------");
                         Console.Write("Qual nome do proprietário: ");
                         nomeProprietario = Console.ReadLine();
-                        consulta = repositorioProduct.ConsultaProductsPorProprietario(nomeProprietario);
+                        consulta = productService.ConsultaProductsPorProprietario(nomeProprietario);
                         if (consulta.Count > 0)
                         {
                             foreach (var item in consulta)
                             {
-                                Console.WriteLine(repositorioProduct.Descricao(item));
+                                Console.WriteLine(productService.Descricao(item));
                             }
                             Console.ReadKey();
                         }
