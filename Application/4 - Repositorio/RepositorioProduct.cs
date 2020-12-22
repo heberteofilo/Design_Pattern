@@ -10,7 +10,7 @@ using System.Linq;
 
 namespace Application._5___Repositorio
 {
-    public class RepositorioProduct : IGeneric<Product>, IProduct
+    public class RepositorioProduct : IProduct
     {
         public List<Product> Products { get; set; }
 
