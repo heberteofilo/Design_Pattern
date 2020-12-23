@@ -11,16 +11,13 @@ namespace Application._5___Services
 {
     public class ProductService : IProductService
     {
-        private readonly RepositorioProduct _RepositorioProduct;
+        public readonly RepositorioProduct _RepositorioProduct;
         private readonly ValidatePorTipo _ValidatePorTipo;
 
         public ProductService()
-        {}
-
-        public ProductService(RepositorioProduct RepositorioProduct, ValidatePorTipo ValidatePorTipo)
         {
-            _RepositorioProduct = RepositorioProduct;
-            _ValidatePorTipo = ValidatePorTipo;
+            _RepositorioProduct = new RepositorioProduct();
+            _ValidatePorTipo = new ValidatePorTipo();
         }
 
         public string AddProduct(Product product)
@@ -40,11 +37,14 @@ namespace Application._5___Services
             if (validarNomeProduct)
             {
                 var data = _RepositorioProduct.Products.Select(p => p).Where(p => p.NomeProduct == nomeProduto).ToList();
-                return data;
+                if (data.Count > 0)
+                {
+                    return data;
+                }              
             }
-
             List<Product> errorProduct = new List<Product>();
-            errorProduct.Add(new Product() { ErrorMessage = _ValidatePorTipo.ValidarPorTipos.FirstOrDefault(p => p.ErrorMessage == "Preencha o campo devidamente.").ErrorMessage });
+            errorProduct.Add(new Product() { ErrorMessage = "Campo não preenchido ou produto não encontrado"});
+
             return errorProduct;
         }
 

@@ -19,13 +19,8 @@ namespace Application._6___Validate
 
         public bool ValidadorDeString(string tipo)
         {
-            if (string.IsNullOrWhiteSpace(tipo) || string.IsNullOrEmpty(tipo))
+            if (string.IsNullOrWhiteSpace(tipo))
             {
-                ValidarPorTipos.Add(new ValidatePorTipo
-                {
-                    ErrorMessage = "Preencha o campo devidamente."
-                });
-
                 return false;
             }
 

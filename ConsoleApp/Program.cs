@@ -21,8 +21,7 @@ namespace ConsoleApp
             ser escalado futuramente para melhores versões.
             */
             #endregion
-            RepositorioProduct repositorioProduct = new RepositorioProduct();
-            ProductService productService = new ProductService(repositorioProduct, new ValidatePorTipo());
+            ProductService productService = new ProductService();
             bool conectado = true;
             string menuOption;
             string nomeProprietario;
@@ -106,14 +105,14 @@ namespace ConsoleApp
                         Console.Write("Qual nome do produto: ");
                         nomeProduto = Console.ReadLine();
                         consulta = productService.ConsultaProductsPorNome(nomeProduto);
-                        var validadorConsulta = consulta.FirstOrDefault(p => p.ErrorMessage != null);
-                        if (validadorConsulta != null)
+                        var errorMessage = consulta.FirstOrDefault().ErrorMessage;
+                        if (errorMessage != null)
                         {
                             Console.WriteLine();
-                            Console.WriteLine("Error encontrado: " + validadorConsulta.ErrorMessage);
+                            Console.WriteLine("Error encontrado: " + errorMessage);
                             Console.ReadKey();
                         }
-                        else if (consulta.Count > 0)
+                        else if (errorMessage == null)
                         {
                             foreach (var item in consulta)
                             {
